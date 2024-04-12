@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nifty xmlns="http://nifty-gui.lessvoid.com/nifty-gui" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://raw.githubusercontent.com/void256/nifty-gui/1.4/nifty-core/src/main/resources/nifty.xsd https://raw.githubusercontent.com/void256/nifty-gui/1.4/nifty-core/src/main/resources/nifty.xsd">
+    <!-- +++++++++++++++++++++++++++++++++++++++ -->
+    <!-- start screen -->
+    <!-- +++++++++++++++++++++++++++++++++++++++ -->
+    <style id="lorem_ipsum">
+        <attributes font="Interface/Fonts/arial-black.fnt" color="#80A7E4" />
+    </style>
+    <style id="option_panel_style">
+        <attributes childLayout="center" align="center" valign="top" height="40px"/>
+    </style>
+    <style id="option_style">
+        <attributes font="Interface/Fonts/felix-titling.fnt" color="#E4E4E6" align="center" valign="center"/>
+    </style>
+    <screen id="root" controller="com.mygame.SampleState">
+        
+        <layer id="GLayer0" childLayout="vertical" align="center" backgroundColor="#020407">
+            <panel id="title_panel" childLayout="horizontal" align="center" valign="center" backgroundColor="#121418">
+                <panel id="title" childLayout="center" align="center">
+                    <text text="PairUp" style="lorem_ipsum" align="center" valign="bottom"/>
+                </panel>
+            </panel>
+            <panel id="nav_panel" childLayout="vertical" align="center" valign="top">
+                <panel id="start" style="option_panel_style">
+                    <text text="Start" style="option_style" />
+                    <interact onClick="play()"/>
+                </panel>
+                <panel id="settings" style="option_panel_style">
+                    <text text="Settings" style="option_style"/>
+                </panel>
+                <panel id="exit" style="option_panel_style">
+                    <text text="Exit" style="option_style"/>
+                    <interact onClick="quit()"/>
+                </panel>
+            </panel>
+        </layer>
+    </screen>
+</nifty>
